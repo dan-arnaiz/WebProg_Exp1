@@ -4,25 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Personal Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 80%;
+            margin: 20px 0;
+        }
+        .project {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        @media (max-width: 1200px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>My Projects</h1>
-    </header>
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <h3>Project 1</h3>
-                <p>Brief description of Project 1.</p>
-                <a href="https://github.com/yourusername/project1">Repository Link</a>
-            </li>
-            <li>
-                <h3>Project 2</h3>
-                <p>Brief description of Project 2.</p>
-                <a href="https://github.com/yourusername/project2">Repository Link</a>
-            </li>
-        </ul>
-    </section>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+    </div>
+    <div class="content">
+        <header>
+            <h1>My Projects</h1>
+        </header>
+        <div class="projects-grid">
+            <div class="project">
+                <h3>BIMS</h3>
+                <p>Barangay Information Management System</p>
+            </div>
+            <div class="project">
+                <h3>InterSync</h3>
+                <p>Productivity and Notetaking Tool</p>
+            </div>
+            <div class="project">
+                <h3>DPRS</h3>
+                <p>Smile Dental Health Care Management System</p>
+            </div>
+            <div class="project">
+                <h3>LMS</h3>
+                <p>Library Management System</p>
+            </div>
+            <div class="project">
+                <h3>InterStat</h3>
+                <p>Statistics, Data Analysis, and Data Visualization Tool</p>
+            </div>
+            <div class="project">
+                <h3>Data Migration System</h3>
+                <p>Automating Data Migration</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
